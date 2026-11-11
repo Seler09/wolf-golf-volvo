@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital Gauge · wolf_golf</title>
+<meta name="description" content="Digital gauge for the main instrument cluster of the Volvo 740 and 940. Reads live engine data wirelessly from an ECUMASTER ECU. Service overview and single-value screens. Detailed DIY installation guide included.">
+<link rel="canonical" href="https://seler09.github.io/wolf-golf-volvo/gauge.html">
+<link rel="alternate" hreflang="en" href="https://seler09.github.io/wolf-golf-volvo/gauge.html">
+<link rel="alternate" hreflang="pl" href="https://seler09.github.io/wolf-golf-volvo/pl/gauge.html">
+<link rel="alternate" hreflang="sv" href="https://seler09.github.io/wolf-golf-volvo/sv/gauge.html">
+<link rel="alternate" hreflang="x-default" href="https://seler09.github.io/wolf-golf-volvo/gauge.html">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="wolf_golf">
+<meta property="og:title" content="Digital Gauge for the Volvo 740 / 940 · wolf_golf">
+<meta property="og:description" content="For the main instrument cluster. Reads live engine data wirelessly from an ECUMASTER ECU. Detailed DIY installation guide included.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:url" content="https://seler09.github.io/wolf-golf-volvo/gauge.html">
+<meta property="og:image" content="https://seler09.github.io/wolf-golf-volvo/img/gauge-5.png">
+<meta property="og:image:alt" content="The wolf_golf digital gauge showing turbo boost, 1.72 bar">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111418" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#080a0c" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f4fae'/%3E%3Cg transform='translate(8 8) scale(.75)'%3E%3Cpath fill='%23f8f9f6' d='M9 5L24 19L40 19L55 5L56 31L45 45L37 59L27 59L19 45L8 31Z'/%3E%3Cpath fill='%231f4fae' d='M17 30L28 34L20 37ZM47 30L36 34L44 37ZM28 51L36 51L32 57ZM14 13L21 20L14 25ZM50 13L43 20L50 25Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="wolf" viewBox="0 0 64 64">
+      <path style="fill:var(--wolf-a,#f8f9f6)" d="M9 5 L24 19 L40 19 L55 5 L56 31 L45 45 L37 59 L27 59 L19 45 L8 31 Z"/>
+      <path style="fill:var(--wolf-b,#1f4fae)" d="M17 30 L28 34 L20 37 Z M47 30 L36 34 L44 37 Z M28 51 L36 51 L32 57 Z M14 13 L21 20 L14 25 Z M50 13 L43 20 L50 25 Z"/>
+    </symbol>
+    <symbol id="book" viewBox="0 0 20 20">
+      <path d="M2.5 4.6 C5.6 3.6 7.9 3.9 10 5.3 C12.1 3.9 14.4 3.6 17.5 4.6 V16.2 C14.4 15.2 12.1 15.5 10 16.9 C7.9 15.5 5.6 15.2 2.5 16.2 Z M10 5.3 V16.9"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="lockup" href="index.html" aria-label="wolf_golf by Maciej Kalinka, home">
+      <span class="mark"><svg aria-hidden="true"><use href="#wolf"/></svg></span>
+      <span class="word"><b>wolf<i>_</i>golf</b><small>by Maciej Kalinka</small></span>
+    </a>
+    <nav class="nav" aria-label="Products">
+      <a href="frame.html"><span class="k">A</span>Centre frame</a>
+      <a class="nb" href="gauge.html" aria-current="page"><span class="k">B</span>Digital gauge</a>
+    </nav>
+    <nav class="lang" aria-label="Language">
+      <a href="gauge.html" hreflang="en" lang="en" aria-current="true">EN<span class="sr-only"> English</span></a><span class="dot" aria-hidden="true">·</span>
+      <a href="pl/gauge.html" hreflang="pl" lang="pl">PL<span class="sr-only"> Polski</span></a><span class="dot" aria-hidden="true">·</span>
+      <a href="sv/gauge.html" hreflang="sv" lang="sv">SV<span class="sr-only"> Svenska</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="p-hero band" aria-labelledby="b-h">
+  <div class="wrap">
+    <div class="sheet-head">
+      <div>Part <b>B</b></div>
+      <div>Digital gauge</div>
+      <div>Volvo 740 · 940</div>
+    </div>
+    <div class="p-title">
+      <div class="letter" aria-hidden="true">B</div>
+      <div>
+        <h1 id="b-h">Digital gauge</h1>
+        <p class="sub">Volvo 740 / 940 · main instrument cluster</p>
+      </div>
+    </div>
+
+    <div class="g-intro">
+      <figure class="fig">
+        <div class="dial-big">
+          <svg class="ticks" viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="99" fill="none" stroke="currentColor" stroke-width="1"/>
+            <g stroke="currentColor" stroke-width="1.2">
+              <line x1="100" y1="1" x2="100" y2="7"/><line x1="100" y1="193" x2="100" y2="199"/>
+              <line x1="1" y1="100" x2="7" y2="100"/><line x1="193" y1="100" x2="199" y2="100"/>
+            </g>
+          </svg>
+          <div class="dial"><img src="img/gauge-5.png" alt="The digital gauge showing turbo boost, 1.72 bar" width="640" height="640" fetchpriority="high"></div>
+        </div>
+        <figcaption class="cap"><b>Fig. B1</b><span>Turbo boost screen, 1.72 bar. Photographed on the working gauge.</span></figcaption>
+      </figure>
+      <div class="g-copy">
+        <p class="intro">A round digital display for the main instrument cluster, the panel with the speedometer and rev counter. It reads <strong>live engine data wirelessly from an ECUMASTER ECU</strong> and shows it as a full service overview or one big reading per screen.</p>
+        <ul class="g-points">
+          <li class="hl"><span class="k">DATA</span><span class="v">Wireless, live from an ECUMASTER ECU</span></li>
+          <li class="st"><span class="k">STATUS</span><span class="v">Working and proven. Every screen on this page is the real gauge.</span></li>
+          <li class="hl"><span class="k">FITTING</span><span class="v">DIY, with a detailed step-by-step installation guide</span></li>
+          <li><span class="k">PLACE</span><span class="v">Main instrument cluster, Volvo 740 and 940</span></li>
+        </ul>
+        <p class="warn">A separate part from the centre frame. It goes in the main cluster, not in the frame’s 52 mm pods.</p>
+        <div class="buy">
+          <div class="row"><span class="k">Part B · price</span><span class="amount req">Price on request</span></div>
+          <a class="btn" href="#contact">Ask about the gauge</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="link-sec grid-bg" aria-labelledby="link-h">
+  <div class="wrap">
+    <div class="block" style="margin-top:0;padding-block:64px 72px">
+      <div class="block-h"><h2 id="link-h">Live data from your ECUMASTER ECU, wirelessly</h2><span class="eyebrow">Fig. B2 · data link</span></div>
+      <p class="block-lead">The gauge takes its readings straight from the ECUMASTER engine management unit in your car. The data travels wirelessly from the ECU to the gauge in the instrument cluster.</p>
+      <figure class="link-fig">
+        <svg class="wl h" viewBox="0 0 1000 262" role="img" aria-label="Diagram: the ECUMASTER ECU sends live engine data wirelessly to the digital gauge in the main instrument cluster">
+          <text class="sm" x="170" y="42" text-anchor="middle">ENGINE MANAGEMENT</text>
+          <path class="ln-2" d="M40 92 h-20 M40 112 h-20 M40 132 h-20 M40 152 h-20 M40 172 h-20"/>
+          <rect class="fill" x="40" y="60" width="260" height="140" rx="4"/>
+          <rect class="ln" x="40" y="60" width="260" height="140" rx="4"/>
+          <path class="ln-2" d="M56 76 h18 M56 184 h18 M266 76 h18 M266 184 h18"/>
+          <text class="brand" x="170" y="132" text-anchor="middle">ECUMASTER</text>
+          <text class="sm" x="170" y="160" text-anchor="middle">ECU</text>
+          <path class="wave" d="M313.8 118.4 A18 18 0 0 1 313.8 141.6 M324.5 109.4 A32 32 0 0 1 324.5 150.6 M335.2 100.4 A46 46 0 0 1 335.2 159.6"/>
+          <path class="air" d="M360 130 H634"/>
+          <path class="arrow" d="M652 130 l-16 -8 v16 z"/>
+          <text class="bl" x="505" y="112" text-anchor="middle">WIRELESS</text>
+          <text class="sm" x="505" y="160" text-anchor="middle">LIVE ENGINE DATA</text>
+          <text class="rd" x="810" y="24" text-anchor="middle">DIGITAL GAUGE</text>
+          <circle class="dial-fill" cx="810" cy="134" r="92"/>
+          <circle class="lnB" cx="810" cy="134" r="92"/>
+          <circle cx="810" cy="134" r="80" fill="none" stroke="#2f363e" stroke-width="2"/>
+          <path d="M767.6 176.4 A60 60 0 1 1 852.4 176.4" fill="none" stroke="#8fb4ff" stroke-width="3"/>
+          <path d="M852.4 91.6 A60 60 0 0 1 852.4 176.4" fill="none" stroke="#ff6b5a" stroke-width="6"/>
+          <text class="read" x="810" y="142" text-anchor="middle">1.72</text>
+          <text class="unit" x="810" y="162" text-anchor="middle">BAR</text>
+          <text class="sm" x="810" y="254" text-anchor="middle">MAIN INSTRUMENT CLUSTER</text>
+        </svg>
+        <svg class="wl v" viewBox="0 0 360 600" role="img" aria-label="Diagram: the ECUMASTER ECU sends live engine data wirelessly to the digital gauge in the main instrument cluster">
+          <text class="sm" x="180" y="18" text-anchor="middle">ENGINE MANAGEMENT</text>
+          <path class="ln-2" d="M100 44 v-14 M140 44 v-14 M180 44 v-14 M220 44 v-14 M260 44 v-14"/>
+          <rect class="fill" x="50" y="44" width="260" height="120" rx="4"/>
+          <rect class="ln" x="50" y="44" width="260" height="120" rx="4"/>
+          <text class="brand" x="180" y="108" text-anchor="middle">ECUMASTER</text>
+          <text class="sm" x="180" y="136" text-anchor="middle">ECU</text>
+          <path class="wave" d="M168.4 177.8 A18 18 0 0 0 191.6 177.8 M159.4 188.5 A32 32 0 0 0 200.6 188.5 M150.4 199.2 A46 46 0 0 0 209.6 199.2"/>
+          <path class="air" d="M180 224 V342"/>
+          <path class="arrow" d="M180 360 l-8 -16 h16 z"/>
+          <text class="bl" x="200" y="280">WIRELESS</text>
+          <text class="sm" x="200" y="302">LIVE ENGINE DATA</text>
+          <circle class="dial-fill" cx="180" cy="460" r="86"/>
+          <circle class="lnB" cx="180" cy="460" r="86"/>
+          <circle cx="180" cy="460" r="74" fill="none" stroke="#2f363e" stroke-width="2"/>
+          <path d="M137.6 502.4 A60 60 0 1 1 222.4 502.4" fill="none" stroke="#8fb4ff" stroke-width="3"/>
+          <path d="M222.4 417.6 A60 60 0 0 1 222.4 502.4" fill="none" stroke="#ff6b5a" stroke-width="6"/>
+          <text class="read" x="180" y="468" text-anchor="middle">1.72</text>
+          <text class="unit" x="180" y="488" text-anchor="middle">BAR</text>
+          <text class="rd" x="180" y="574" text-anchor="middle">DIGITAL GAUGE</text>
+          <text class="sm" x="180" y="594" text-anchor="middle">MAIN INSTRUMENT CLUSTER</text>
+        </svg>
+        <figcaption><b>Fig. B2</b> From the ECUMASTER ECU to the gauge in the main cluster.</figcaption>
+      </figure>
+      <ol class="wl-notes">
+        <li><span class="k">01 · Source</span><b>ECUMASTER ECU</b>The engine management unit already running your engine provides the readings.</li>
+        <li><span class="k">02 · Link</span><b>Wireless</b>Live engine data reaches the gauge wirelessly.</li>
+        <li><span class="k">03 · Display</span><b>Digital gauge</b>In the main instrument cluster, with the speedometer and rev counter.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band band-sec" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="block">
+      <div class="block-h"><h2 id="svc-h">What the screens show</h2><span class="eyebrow">Fig. B3 to B9 · click to enlarge</span></div>
+      <div class="svc">
+        <figure class="fig">
+          <div class="dial-big">
+            <svg class="ticks" viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="99" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+            <a class="dial-link zoom" href="img/gauge-1.png" data-lb data-round data-cap="Fig. B3 · Service screen 1 of 2: twelve readings at once.">
+              <span class="dial" style="display:block"><img src="img/gauge-1.png" alt="Service screen 1 of 2: RPM 1022, boost -0.48, AFR 14.7, oil 22, EGT 222, battery 13.7, speed 0 km/h, peak boost -0.37, intake air 19, coolant 29, peak coolant 29, throttle 0, NO SD" width="640" height="640" loading="lazy"></span>
+            </a>
+          </div>
+          <figcaption class="cap"><b>Fig. B3</b><span>Service screen 1 of 2.</span></figcaption>
+        </figure>
+        <div class="tx">
+          <h3>Service screen: twelve readings at once</h3>
+          <p>One page with the whole engine at a glance.</p>
+          <dl class="readings">
+            <div><dt>RPM</dt><dd>Engine speed</dd></div>
+            <div><dt>KM/H</dt><dd>Road speed</dd></div>
+            <div><dt>BOOST</dt><dd>Boost pressure</dd></div>
+            <div><dt>MAX B</dt><dd>Peak boost</dd></div>
+            <div><dt>AFR</dt><dd>Air-fuel ratio</dd></div>
+            <div><dt>IAT</dt><dd>Intake air temperature</dd></div>
+            <div><dt>OIL</dt><dd>Oil reading</dd></div>
+            <div><dt>CLT</dt><dd>Coolant temperature</dd></div>
+            <div><dt>EGT</dt><dd>Exhaust gas temperature</dd></div>
+            <div><dt>MAX C</dt><dd>Peak coolant temperature</dd></div>
+            <div><dt>BAT</dt><dd>Battery voltage</dd></div>
+            <div><dt>TPS</dt><dd>Throttle position</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-h"><h2 id="scr-h">One big reading per screen</h2><span class="eyebrow">Photos and recordings of the working gauge</span></div>
+      <div class="screens">
+        <figure>
+          <a class="dial-link zoom" href="img/gauge-2.png" data-lb data-round data-cap="Fig. B4 · Coolant temperature (CLT), 26 °C."><span class="dial" style="display:block"><img src="img/gauge-2.png" alt="Coolant temperature screen reading 26 °C" width="640" height="640" loading="lazy"></span></a>
+          <figcaption><b>B4 · Coolant</b>CLT, 26 °C</figcaption>
+        </figure>
+        <figure>
+          <a class="dial-link zoom" href="img/gauge-3.png" data-lb data-round data-cap="Fig. B5 · Exhaust gas temperature (EGT), 523 °C."><span class="dial" style="display:block"><img src="img/gauge-3.png" alt="Exhaust gas temperature screen reading 523 °C" width="640" height="640" loading="lazy"></span></a>
+          <figcaption><b>B5 · Exhaust gas</b>EGT, 523 °C</figcaption>
+        </figure>
+        <figure>
+          <a class="dial-link zoom" href="img/gauge-5.png" data-lb data-round data-cap="Fig. B6 · Turbo boost, 1.72 bar."><span class="dial" style="display:block"><img src="img/gauge-5.png" alt="Turbo boost screen reading 1.72 bar" width="640" height="640" loading="lazy"></span></a>
+          <figcaption><b>B6 · Turbo boost</b>1.72 bar</figcaption>
+        </figure>
+        <figure>
+          <a class="dial-link zoom" href="img/gauge-4.gif" data-lb data-round data-cap="Fig. B7 · Road speed, recorded live, counting up to 227 km/h."><span class="dial" style="display:block"><img src="img/gauge-4.gif" alt="Animated speed screen counting up to 227 km/h" width="360" height="360" loading="lazy"></span></a>
+          <figcaption><b>B7 · Speed <span class="live">LIVE</span></b>Counting up to 227 km/h</figcaption>
+        </figure>
+        <figure>
+          <a class="dial-link zoom" href="img/gauge-6.gif" data-lb data-round data-cap="Fig. B8 · Exhaust gas temperature, recorded live, 715 °C."><span class="dial" style="display:block"><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/gauge-3.png"><img src="img/gauge-6.gif" alt="Animated exhaust gas temperature screen reaching 715 °C" width="360" height="360" loading="lazy"></picture></span></a>
+          <figcaption><b>B8 · Exhaust gas <span class="live">LIVE</span></b>EGT reaching 715 °C</figcaption>
+        </figure>
+        <figure>
+          <a class="dial-link zoom" href="img/gauge-7.gif" data-lb data-round data-cap="Fig. B9 · Turbo boost, recorded live, 0.07 bar."><span class="dial" style="display:block"><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/gauge-5.png"><img src="img/gauge-7.gif" alt="Animated turbo boost screen, 0.07 bar" width="360" height="360" loading="lazy"></picture></span></a>
+          <figcaption><b>B9 · Turbo boost <span class="live">LIVE</span></b>Boost at 0.07 bar</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="content">
+  <div class="wrap">
+    <section class="block" id="box" aria-labelledby="box-h">
+      <div class="block-h"><h2 id="box-h">What’s in the box</h2><span class="eyebrow">Part B</span></div>
+      <div class="box">
+        <div class="box-item">
+          <span class="no">01</span>
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="21"/><circle cx="28" cy="28" r="16"/><path d="M18 38 A14 14 0 1 1 38 38"/><path d="M28 28 L36 21"/><path d="M47 9 a7 7 0 0 1 0 9 M50.5 5.5 a12 12 0 0 1 0 16"/></svg>
+          <div><h3>Digital gauge</h3><p>For the main instrument cluster of the Volvo 740 and 940. Reads live data wirelessly from an ECUMASTER ECU.</p></div>
+        </div>
+        <div class="box-item guide">
+          <span class="no">02</span>
+          <svg class="ico-book" viewBox="0 0 20 20" aria-hidden="true"><use href="#book"/></svg>
+          <div><h3>Detailed installation guide</h3><p>Step-by-step instructions, so you can fit the gauge yourself.</p></div>
+        </div>
+      </div>
+      <p class="not-inc"><b>For cars running an ECUMASTER ECU.</b> The gauge reads its data from that ECU, which is not part of this product.</p>
+    </section>
+  </div>
+</div>
+
+<section class="order" id="contact" aria-labelledby="o-h">
+  <div class="wrap">
+    <div class="sec-label"><p class="eyebrow">Order</p></div>
+    <div class="order-grid">
+      <div>
+        <h2 id="o-h">Ask about the digital gauge</h2>
+        <p class="intro">Price on request. Made and sold by Maciej Kalinka, with a detailed installation guide in the box.</p>
+      </div>
+      <div class="contact">
+        <span class="mark"><svg aria-hidden="true"><use href="#wolf"/></svg></span>
+        <div class="who"><b>Maciej Kalinka</b><span>wolf_golf</span></div>
+        <p class="soon">Contact details coming soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<aside class="other" aria-label="Other product">
+  <div class="wrap">
+    <a class="other-card to-a" href="frame.html">
+      <div class="thumb plate"><img src="img/front.webp" alt="" width="1920" height="1440" loading="lazy"></div>
+      <div>
+        <p class="eyebrow">Also from wolf_golf · Part <b>A</b></p>
+        <h2>Centre dash frame</h2>
+        <p class="d">For the centre of the dashboard. Takes a 1DIN radio, three 52 mm gauges, a lighter or USB port and the ashtray.</p>
+      </div>
+      <p class="go"><b>150 €</b><span>See the frame</span></p>
+    </a>
+  </div>
+</aside>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="lockup" href="index.html" aria-label="wolf_golf by Maciej Kalinka, home">
+      <span class="mark"><svg aria-hidden="true"><use href="#wolf"/></svg></span>
+      <span class="word"><b>wolf<i>_</i>golf</b><small>by Maciej Kalinka</small></span>
+    </a>
+    <p>Independent aftermarket parts, not affiliated with Volvo Car Corporation or ECUMASTER. Volvo is a trademark of Volvo Car Corporation. ECUMASTER is a trademark of its respective owner.</p>
+    <nav class="f-nav" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="frame.html">Centre frame</a>
+      <a href="gauge.html" aria-current="page">Digital gauge</a>
+    </nav>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <div class="lb-bar"><span class="lb-count" aria-live="polite"></span><button type="button" data-lb-close>Close <span aria-hidden="true">✕</span></button></div>
+  <div class="lb-stage">
+    <button type="button" class="lb-nav lb-prev" data-lb-prev aria-label="Previous photo">←</button>
+    <div class="lb-frame"><img alt=""></div>
+    <button type="button" class="lb-nav lb-next" data-lb-next aria-label="Next photo">→</button>
+  </div>
+  <p class="lb-cap"></p>
+</dialog>
+
+<script>
+(function(){
+  var d=document.getElementById('lb');
+  if(!d||typeof d.showModal!=='function')return;
+  var links=Array.prototype.slice.call(document.querySelectorAll('a[data-lb]'));
+  if(!links.length)return;
+  var stage=d.querySelector('.lb-stage'),frame=d.querySelector('.lb-frame'),img=frame.querySelector('img'),
+      cap=d.querySelector('.lb-cap'),cnt=d.querySelector('.lb-count'),i=0,opener=null;
+  var navs=d.querySelectorAll('.lb-nav');
+  for(var n=0;n<navs.length;n++){navs[n].hidden=links.length<2;}
+  function show(k){
+    i=(k+links.length)%links.length;
+    var a=links[i],t=a.querySelector('img'),round=a.hasAttribute('data-round');
+    img.src=a.getAttribute('href');
+    img.alt=t?(t.getAttribute('alt')||''):'';
+    cap.textContent=a.getAttribute('data-cap')||'';
+    cnt.textContent=(i+1)+' / '+links.length;
+    frame.classList.toggle('round',round);
+    stage.classList.toggle('dark',round);
+  }
+  links.forEach(function(a,k){
+    a.addEventListener('click',function(e){
+      if(e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+      e.preventDefault();opener=a;show(k);d.showModal();
+    });
+  });
+  d.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'){e.preventDefault();show(i-1);}
+    else if(e.key==='ArrowRight'){e.preventDefault();show(i+1);}
+  });
+  d.addEventListener('click',function(e){
+    var t=e.target;
+    if(t===d||t===stage){d.close();return;}
+    if(t.closest('[data-lb-close]'))d.close();
+    else if(t.closest('[data-lb-prev]'))show(i-1);
+    else if(t.closest('[data-lb-next]'))show(i+1);
+  });
+  d.addEventListener('close',function(){if(opener)opener.focus();});
+})();
+</script>
+</body>
+</html>
