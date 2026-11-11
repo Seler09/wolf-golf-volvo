@@ -1,18 +1,4 @@
-/* wolf_golf: stage reveals + photo viewer */
-(function () {
-  var scenes = Array.prototype.slice.call(document.querySelectorAll('.scene'));
-  var first = document.querySelector('.hero, .p-hero');
-  function light(el) { el.classList.add('on'); }
-  if (first) requestAnimationFrame(function () { setTimeout(function () { light(first); }, 120); });
-  if (!('IntersectionObserver' in window)) { scenes.forEach(light); return; }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { light(e.target); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
-  scenes.forEach(function (s) { if (s !== first) io.observe(s); });
-})();
-
+/* wolf_golf: photo viewer */
 (function () {
   var d = document.getElementById('lb');
   if (!d || typeof d.showModal !== 'function') return;
