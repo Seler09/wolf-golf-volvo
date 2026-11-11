@@ -46,9 +46,9 @@
 <main id="main">
 
 <section class="scene p-hero" aria-labelledby="h1">
-<div class="wash" aria-hidden="true"></div><div class="haze" aria-hidden="true"></div>
+
 <div class="wrap p-grid">
-<figure class="p-art" style="margin:0"><span class="beam blue" style="--bd:.9s" aria-hidden="true"></span><span class="pool blue" style="--bd:.9s" aria-hidden="true"></span>
+<figure class="p-art panel" style="margin:0">
 <div class="rise" style="--d:1.1s;width:min(460px,86%)"><div class="dial"><img src="../img/gauge-5.png" alt="Den digitala mätaren som visar laddtryck, 1,72 bar" width="640" height="640" fetchpriority="high"></div></div>
 <figcaption class="rv" style="--d:1.8s">Skärm för laddtryck, 1,72 bar, fotograferad på den fungerande mätaren.</figcaption></figure>
 <div>
@@ -61,24 +61,52 @@
 </div>
 </section>
 
+
+<section class="scene tight" aria-labelledby="wh">
+<div class="wrap">
+<div class="sec-head"><p class="eyebrow rv">Var den sitter</p><h2 id="wh" class="rv" style="--d:.1s">I kombiinstrumentet, framför föraren.</h2></div>
+<figure class="where-fig rv" style="--d:.2s"><svg class="dash" viewBox="0 0 900 290" role="img" aria-label="Diagram över instrumentbrädan: den digitala mätaren sitter i kombiinstrumentet bakom ratten, ramen i mitten av instrumentbrädan">
+<path class="ln seq" d="M20 60 H880 M20 60 V200 M880 60 V200" style="--d:.1s"/>
+<path class="ln seq" d="M20 200 H330 M560 200 H880" style="--d:.2s"/>
+<path class="ln seq" d="M80 290 A115 115 0 0 1 310 290" style="--d:.3s"/>
+<path class="ln seq" d="M104 290 A91 91 0 0 1 286 290" style="--d:.3s"/>
+<rect class="ln seq" x="360" y="78" width="170" height="34" rx="4" style="--d:.3s"/>
+<path class="ln seq" d="M372 88 H518 M372 95 H518 M372 102 H518" style="--d:.3s"/>
+<rect class="ln seq" x="600" y="78" width="230" height="34" rx="4" style="--d:.3s"/>
+<g class="seq" style="--d:.6s">
+<rect class="gz" x="70" y="78" width="250" height="96" rx="12"/>
+<circle class="gl" cx="140" cy="126" r="34"/><circle class="gl" cx="250" cy="126" r="34"/>
+<path class="gl" d="M140 126 l-20 -16 M250 126 l18 -18"/>
+<text x="140" y="150" text-anchor="middle">km/h</text><text x="250" y="150" text-anchor="middle">rpm</text>
+</g>
+<g class="seq muted" style="--d:.9s">
+<rect class="fz" x="345" y="124" width="200" height="132" rx="6"/>
+<rect class="fl" x="368" y="136" width="154" height="34"/>
+<circle class="fl" cx="383" cy="196" r="17"/><circle class="fl" cx="445" cy="196" r="17"/><circle class="fl" cx="507" cy="196" r="17"/>
+<circle class="fl" cx="380" cy="238" r="9"/><rect class="fl" x="404" y="228" width="118" height="20"/>
+</g>
+<g class="seq" style="--d:1.2s"><path class="lead g" d="M195 78 V30 H232"/><circle class="dot g" cx="195" cy="78" r="4"/><text class="lbl g" x="240" y="36">Digital mätare</text></g>
+</svg><ul class="keys"><li><span><b>Digital mätare</b> i kombiinstrumentet, bredvid hastighetsmätaren och varvräknaren.</span></li></ul></figure>
+</div>
+</section>
 <section class="scene" aria-labelledby="s2">
-<div class="haze" aria-hidden="true"></div>
+
 <div class="wrap">
 <div class="sec-head c"><p class="eyebrow rv">Länken</p><h2 id="s2" class="rv" style="--d:.1s">Data i realtid från din ECUMASTER-styrenhet, trådlöst.</h2><p class="lead rv" style="--d:.2s">Mätaren hämtar sina värden direkt från ECUMASTER-motorstyrningen i din bil. Data skickas trådlöst från styrenheten till mätaren i kombiinstrumentet.</p></div>
 <div class="link" role="img" aria-label="Diagram: ECUMASTER-styrenheten skickar motordata i realtid trådlöst till den digitala mätaren i kombiinstrumentet">
 <div class="link-col rise" style="--d:.4s"><div class="ecu"><b>ECUMASTER</b><small>Motorstyrenhet</small></div></div>
-<div class="air rv" style="--d:.9s" aria-hidden="true"><span class="track"></span><span class="waves"><i></i><i></i><i></i></span><span class="lbl">Trådlöst<small>Motordata i realtid</small></span></div>
+<div class="air rv" style="--d:.9s" aria-hidden="true"><span class="track"></span><span class="lbl">Trådlöst<small>Motordata i realtid</small></span></div>
 <div class="link-col rise" style="--d:1.3s"><div class="dial"><img src="../img/gauge-3.png" alt="" width="640" height="640" loading="lazy"></div><p class="cap">I kombiinstrumentet</p></div>
 </div>
 </div>
 </section>
 
 <section class="scene" aria-labelledby="s3">
-<div class="haze" aria-hidden="true"></div>
+
 <div class="wrap">
 <div class="sec-head"><p class="eyebrow rv">Hela motorn i en blick</p><h2 id="s3" class="rv" style="--d:.1s">Tolv värden. En skärm.</h2></div>
 <div class="svc">
-<figure style="margin:0"><div class="dial-wrap"><span class="beam blue" aria-hidden="true"></span>
+<figure style="margin:0"><div class="dial-wrap panel">
 <a class="rise" style="--d:.2s;width:min(460px,100%)" href="../img/gauge-1.png" data-lb data-round data-cap="Serviceskärm 1 av 2, fotograferad på den fungerande mätaren."><div class="dial"><img src="../img/gauge-1.png" alt="Serviceskärm 1 av 2: RPM 1022, laddtryck -0,48, AFR 14,7, olja 22, EGT 222, batteri 13,7, hastighet 0 km/h, max laddtryck -0,37, insugsluft 19, kylvätska 29, max kylvätska 29, gasspjäll 0, NO SD" width="640" height="640" loading="lazy"></div></a></div>
 <figcaption class="rv" style="--d:.6s">Serviceskärm 1 av 2, fotograferad på den fungerande mätaren.</figcaption></figure>
 <dl class="readings"><div class="rv" style="--d:0.40s"><dt>RPM</dt><dd>Motorvarvtal</dd></div><div class="rv" style="--d:0.48s"><dt>KM/H</dt><dd>Hastighet</dd></div><div class="rv" style="--d:0.56s"><dt>BOOST</dt><dd>Laddtryck</dd></div><div class="rv" style="--d:0.64s"><dt>MAX B</dt><dd>Max laddtryck</dd></div><div class="rv" style="--d:0.72s"><dt>AFR</dt><dd>Luft-bränsleförhållande</dd></div><div class="rv" style="--d:0.80s"><dt>IAT</dt><dd>Insugsluftens temperatur</dd></div><div class="rv" style="--d:0.88s"><dt>OIL</dt><dd>Oljevärde</dd></div><div class="rv" style="--d:0.96s"><dt>CLT</dt><dd>Kylvätsketemperatur</dd></div><div class="rv" style="--d:1.04s"><dt>EGT</dt><dd>Avgastemperatur</dd></div><div class="rv" style="--d:1.12s"><dt>MAX C</dt><dd>Max kylvätsketemperatur</dd></div><div class="rv" style="--d:1.20s"><dt>BAT</dt><dd>Batterispänning</dd></div><div class="rv" style="--d:1.28s"><dt>TPS</dt><dd>Gasspjällsläge</dd></div></dl>
@@ -107,7 +135,7 @@
 </section>
 
 <section class="scene tight" id="contact" aria-labelledby="s6">
-<div class="haze" aria-hidden="true"></div>
+
 <div class="wrap order">
 <div><p class="eyebrow rv">Beställning</p><h2 id="s6" class="rv" style="--d:.1s">Fråga om den digitala mätaren</h2><p class="lead rv" style="--d:.2s">Pris på förfrågan. Tillverkas och säljs av Maciej Kalinka, med detaljerad monteringsanvisning i lådan.</p><p class="price req rv" style="--d:.3s">Pris på förfrågan</p></div>
 <div class="contact rv" style="--d:.2s"><div class="who"><span class="mark"><svg aria-hidden="true"><use href="#wolf"/></svg></span><div><b>Maciej Kalinka</b><span>wolf_golf</span></div></div><h3>Vill du beställa?</h3><p class="soon">Kontaktuppgifter kommer snart.</p></div>
